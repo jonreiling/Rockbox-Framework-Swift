@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		81DCF1071C2DCDBC0015B9E8 /* Rockbox-Client-OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 81DCF1061C2DCDBC0015B9E8 /* Rockbox-Client-OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81DCF11D1C2DCF6D0015B9E8 /* Rockbox-Client-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 81DCF11C1C2DCF6D0015B9E8 /* Rockbox-Client-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81DCF1221C2DCFA10015B9E8 /* RockboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCF1131C2DCEBB0015B9E8 /* RockboxClient.swift */; };
+		81DCF1231C2DCFA60015B9E8 /* RockboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCF1131C2DCEBB0015B9E8 /* RockboxClient.swift */; };
+		81E2049C1C2EED9B00C0F954 /* RBAlbum.swift in Headers */ = {isa = PBXBuildFile; fileRef = 81E8FB801C2E2C02001897AB /* RBAlbum.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E2049D1C2EED9B00C0F954 /* RBArtist.swift in Headers */ = {isa = PBXBuildFile; fileRef = 81E8FB811C2E2C02001897AB /* RBArtist.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E2049E1C2EED9B00C0F954 /* RBBase.swift in Headers */ = {isa = PBXBuildFile; fileRef = 81E8FB821C2E2C02001897AB /* RBBase.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E2049F1C2EED9B00C0F954 /* RBTrack.swift in Headers */ = {isa = PBXBuildFile; fileRef = 81E8FB831C2E2C02001897AB /* RBTrack.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E8FB841C2E2C02001897AB /* RBAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB801C2E2C02001897AB /* RBAlbum.swift */; };
+		81E8FB851C2E2C02001897AB /* RBArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB811C2E2C02001897AB /* RBArtist.swift */; };
+		81E8FB861C2E2C02001897AB /* RBBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB821C2E2C02001897AB /* RBBase.swift */; };
+		81E8FB871C2E2C02001897AB /* RBTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB831C2E2C02001897AB /* RBTrack.swift */; };
+		81E8FB881C2E3049001897AB /* RBAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB801C2E2C02001897AB /* RBAlbum.swift */; };
+		81E8FB891C2E3049001897AB /* RBArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB811C2E2C02001897AB /* RBArtist.swift */; };
+		81E8FB8A1C2E3049001897AB /* RBBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB821C2E2C02001897AB /* RBBase.swift */; };
+		81E8FB8B1C2E3049001897AB /* RBTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB831C2E2C02001897AB /* RBTrack.swift */; };
+		81E8FB8C1C2E304F001897AB /* RBAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB801C2E2C02001897AB /* RBAlbum.swift */; };
+		81E8FB8D1C2E304F001897AB /* RBArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB811C2E2C02001897AB /* RBArtist.swift */; };
+		81E8FB8E1C2E304F001897AB /* RBBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB821C2E2C02001897AB /* RBBase.swift */; };
+		81E8FB8F1C2E304F001897AB /* RBTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E8FB831C2E2C02001897AB /* RBTrack.swift */; };
+		81F104891C2E15200062F58A /* Rockbox-Client-tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 81F104881C2E15200062F58A /* Rockbox-Client-tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81F1048E1C2E154F0062F58A /* RockboxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DCF1131C2DCEBB0015B9E8 /* RockboxClient.swift */; };
+		81F104951C2E1B380062F58A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F104931C2E1B380062F58A /* Alamofire.framework */; };
+		81F104961C2E1B380062F58A /* Socket_IO_Client_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F104941C2E1B380062F58A /* Socket_IO_Client_Swift.framework */; };
+		81F104991C2E1B770062F58A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F104971C2E1B770062F58A /* Alamofire.framework */; };
+		81F1049A1C2E1B770062F58A /* Socket_IO_Client_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F104981C2E1B770062F58A /* Socket_IO_Client_Swift.framework */; };
+		81F1049D1C2E1B7E0062F58A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F1049B1C2E1B7E0062F58A /* Alamofire.framework */; };
+		81F1049E1C2E1B7E0062F58A /* Socket_IO_Client_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F1049C1C2E1B7E0062F58A /* Socket_IO_Client_Swift.framework */; };
+		81F104A01C2E1B990062F58A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F1049F1C2E1B990062F58A /* Pods.framework */; };
+		81F104A21C2E1B9D0062F58A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81F104A11C2E1B9D0062F58A /* Pods.framework */; };
+		A228CEF9000BB83801921445 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0408E0F007BE38B3FE85AA5 /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09C6115F2C318DEB5AECB1E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4F0977CA2E3FB386806EEB56 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		81DCF1041C2DCDBC0015B9E8 /* RockboxClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RockboxClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DCF1061C2DCDBC0015B9E8 /* Rockbox-Client-OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rockbox-Client-OSX.h"; sourceTree = "<group>"; };
+		81DCF1081C2DCDBC0015B9E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81DCF1131C2DCEBB0015B9E8 /* RockboxClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RockboxClient.swift; path = Source/RockboxClient.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		81DCF11A1C2DCF6D0015B9E8 /* RockboxClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RockboxClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81DCF11C1C2DCF6D0015B9E8 /* Rockbox-Client-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rockbox-Client-iOS.h"; sourceTree = "<group>"; };
+		81DCF11E1C2DCF6D0015B9E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E8FB801C2E2C02001897AB /* RBAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBAlbum.swift; sourceTree = "<group>"; };
+		81E8FB811C2E2C02001897AB /* RBArtist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBArtist.swift; sourceTree = "<group>"; };
+		81E8FB821C2E2C02001897AB /* RBBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBBase.swift; sourceTree = "<group>"; };
+		81E8FB831C2E2C02001897AB /* RBTrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RBTrack.swift; sourceTree = "<group>"; };
+		81F104861C2E15200062F58A /* RockboxClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RockboxClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F104881C2E15200062F58A /* Rockbox-Client-tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rockbox-Client-tvOS.h"; sourceTree = "<group>"; };
+		81F1048A1C2E15200062F58A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81F1048F1C2E1A9B0062F58A /* Socket_IO_Client_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket_IO_Client_Swift.framework; path = "Pods/../build/Debug-iphoneos/Socket_IO_Client_Swift.framework"; sourceTree = "<group>"; };
+		81F104911C2E1AA00062F58A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		81F104931C2E1B380062F58A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		81F104941C2E1B380062F58A /* Socket_IO_Client_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket_IO_Client_Swift.framework; path = "Pods/../build/Debug-iphoneos/Socket_IO_Client_Swift.framework"; sourceTree = "<group>"; };
+		81F104971C2E1B770062F58A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		81F104981C2E1B770062F58A /* Socket_IO_Client_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket_IO_Client_Swift.framework; path = "Pods/../build/Debug-iphoneos/Socket_IO_Client_Swift.framework"; sourceTree = "<group>"; };
+		81F1049B1C2E1B7E0062F58A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
+		81F1049C1C2E1B7E0062F58A /* Socket_IO_Client_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket_IO_Client_Swift.framework; path = "Pods/../build/Debug-iphoneos/Socket_IO_Client_Swift.framework"; sourceTree = "<group>"; };
+		81F1049F1C2E1B990062F58A /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		81F104A11C2E1B9D0062F58A /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		F0408E0F007BE38B3FE85AA5 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81DCF1001C2DCDBC0015B9E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F1049D1C2E1B7E0062F58A /* Alamofire.framework in Frameworks */,
+				81F1049E1C2E1B7E0062F58A /* Socket_IO_Client_Swift.framework in Frameworks */,
+				A228CEF9000BB83801921445 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DCF1161C2DCF6D0015B9E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F104A01C2E1B990062F58A /* Pods.framework in Frameworks */,
+				81F104951C2E1B380062F58A /* Alamofire.framework in Frameworks */,
+				81F104961C2E1B380062F58A /* Socket_IO_Client_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F104821C2E15200062F58A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F104A21C2E1B9D0062F58A /* Pods.framework in Frameworks */,
+				81F104991C2E1B770062F58A /* Alamofire.framework in Frameworks */,
+				81F1049A1C2E1B770062F58A /* Socket_IO_Client_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E3A59AE544076CE6CB663E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81F104A11C2E1B9D0062F58A /* Pods.framework */,
+				81F1049F1C2E1B990062F58A /* Pods.framework */,
+				81F1049B1C2E1B7E0062F58A /* Alamofire.framework */,
+				81F1049C1C2E1B7E0062F58A /* Socket_IO_Client_Swift.framework */,
+				81F104971C2E1B770062F58A /* Alamofire.framework */,
+				81F104981C2E1B770062F58A /* Socket_IO_Client_Swift.framework */,
+				81F104931C2E1B380062F58A /* Alamofire.framework */,
+				81F104941C2E1B380062F58A /* Socket_IO_Client_Swift.framework */,
+				81F104911C2E1AA00062F58A /* Alamofire.framework */,
+				81F1048F1C2E1A9B0062F58A /* Socket_IO_Client_Swift.framework */,
+				F0408E0F007BE38B3FE85AA5 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81DCF0EA1C2DCD750015B9E8 = {
+			isa = PBXGroup;
+			children = (
+				81DCF1121C2DCE8F0015B9E8 /* Source */,
+				81DCF1051C2DCDBC0015B9E8 /* Rockbox-Client-OSX */,
+				81DCF11B1C2DCF6D0015B9E8 /* Rockbox-Client-iOS */,
+				81F104871C2E15200062F58A /* Rockbox-Client-tvOS */,
+				81DCF0F51C2DCD750015B9E8 /* Products */,
+				FD777948243CE1325431EB48 /* Pods */,
+				6E3A59AE544076CE6CB663E5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		81DCF0F51C2DCD750015B9E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81DCF1041C2DCDBC0015B9E8 /* RockboxClient.framework */,
+				81DCF11A1C2DCF6D0015B9E8 /* RockboxClient.framework */,
+				81F104861C2E15200062F58A /* RockboxClient.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81DCF1051C2DCDBC0015B9E8 /* Rockbox-Client-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				81DCF1061C2DCDBC0015B9E8 /* Rockbox-Client-OSX.h */,
+				81DCF1081C2DCDBC0015B9E8 /* Info.plist */,
+			);
+			path = "Rockbox-Client-OSX";
+			sourceTree = "<group>";
+		};
+		81DCF1121C2DCE8F0015B9E8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				81E8FB7F1C2E2C02001897AB /* Model */,
+				81DCF1131C2DCEBB0015B9E8 /* RockboxClient.swift */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		81DCF11B1C2DCF6D0015B9E8 /* Rockbox-Client-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81DCF11C1C2DCF6D0015B9E8 /* Rockbox-Client-iOS.h */,
+				81DCF11E1C2DCF6D0015B9E8 /* Info.plist */,
+			);
+			path = "Rockbox-Client-iOS";
+			sourceTree = "<group>";
+		};
+		81E8FB7F1C2E2C02001897AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81E8FB801C2E2C02001897AB /* RBAlbum.swift */,
+				81E8FB811C2E2C02001897AB /* RBArtist.swift */,
+				81E8FB821C2E2C02001897AB /* RBBase.swift */,
+				81E8FB831C2E2C02001897AB /* RBTrack.swift */,
+			);
+			name = Model;
+			path = Source/Model;
+			sourceTree = "<group>";
+		};
+		81F104871C2E15200062F58A /* Rockbox-Client-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				81F104881C2E15200062F58A /* Rockbox-Client-tvOS.h */,
+				81F1048A1C2E15200062F58A /* Info.plist */,
+			);
+			path = "Rockbox-Client-tvOS";
+			sourceTree = "<group>";
+		};
+		FD777948243CE1325431EB48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F0977CA2E3FB386806EEB56 /* Pods.debug.xcconfig */,
+				09C6115F2C318DEB5AECB1E6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		81DCF1011C2DCDBC0015B9E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DCF1071C2DCDBC0015B9E8 /* Rockbox-Client-OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DCF1171C2DCF6D0015B9E8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DCF11D1C2DCF6D0015B9E8 /* Rockbox-Client-iOS.h in Headers */,
+				81E2049C1C2EED9B00C0F954 /* RBAlbum.swift in Headers */,
+				81E2049D1C2EED9B00C0F954 /* RBArtist.swift in Headers */,
+				81E2049E1C2EED9B00C0F954 /* RBBase.swift in Headers */,
+				81E2049F1C2EED9B00C0F954 /* RBTrack.swift in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F104831C2E15200062F58A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81F104891C2E15200062F58A /* Rockbox-Client-tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		81DCF1031C2DCDBC0015B9E8 /* Rockbox-Client-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DCF1091C2DCDBC0015B9E8 /* Build configuration list for PBXNativeTarget "Rockbox-Client-OSX" */;
+			buildPhases = (
+				C42A049E289C3A2B12DD11FC /* Check Pods Manifest.lock */,
+				81DCF0FF1C2DCDBC0015B9E8 /* Sources */,
+				81DCF1001C2DCDBC0015B9E8 /* Frameworks */,
+				81DCF1011C2DCDBC0015B9E8 /* Headers */,
+				81DCF1021C2DCDBC0015B9E8 /* Resources */,
+				F013573C82C74B0AEA431794 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rockbox-Client-OSX";
+			productName = "Rockbox-Client-OSX";
+			productReference = 81DCF1041C2DCDBC0015B9E8 /* RockboxClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81DCF1191C2DCF6D0015B9E8 /* Rockbox-Client-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81DCF11F1C2DCF6D0015B9E8 /* Build configuration list for PBXNativeTarget "Rockbox-Client-iOS" */;
+			buildPhases = (
+				81DCF1151C2DCF6D0015B9E8 /* Sources */,
+				81DCF1161C2DCF6D0015B9E8 /* Frameworks */,
+				81DCF1171C2DCF6D0015B9E8 /* Headers */,
+				81DCF1181C2DCF6D0015B9E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rockbox-Client-iOS";
+			productName = "Rockbox-Client-iOS";
+			productReference = 81DCF11A1C2DCF6D0015B9E8 /* RockboxClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81F104851C2E15200062F58A /* Rockbox-Client-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F1048B1C2E15200062F58A /* Build configuration list for PBXNativeTarget "Rockbox-Client-tvOS" */;
+			buildPhases = (
+				81F104811C2E15200062F58A /* Sources */,
+				81F104821C2E15200062F58A /* Frameworks */,
+				81F104831C2E15200062F58A /* Headers */,
+				81F104841C2E15200062F58A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rockbox-Client-tvOS";
+			productName = "Rockbox-Client-tvOS";
+			productReference = 81F104861C2E15200062F58A /* RockboxClient.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81DCF0EB1C2DCD750015B9E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = AKQA;
+				TargetAttributes = {
+					81DCF1031C2DCDBC0015B9E8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					81DCF1191C2DCF6D0015B9E8 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					81F104851C2E15200062F58A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 81DCF0EE1C2DCD750015B9E8 /* Build configuration list for PBXProject "Rockbox-Framework-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 81DCF0EA1C2DCD750015B9E8;
+			productRefGroup = 81DCF0F51C2DCD750015B9E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81DCF1031C2DCDBC0015B9E8 /* Rockbox-Client-OSX */,
+				81DCF1191C2DCF6D0015B9E8 /* Rockbox-Client-iOS */,
+				81F104851C2E15200062F58A /* Rockbox-Client-tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81DCF1021C2DCDBC0015B9E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DCF1181C2DCF6D0015B9E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F104841C2E15200062F58A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C42A049E289C3A2B12DD11FC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F013573C82C74B0AEA431794 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81DCF0FF1C2DCDBC0015B9E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81DCF1221C2DCFA10015B9E8 /* RockboxClient.swift in Sources */,
+				81E8FB871C2E2C02001897AB /* RBTrack.swift in Sources */,
+				81E8FB841C2E2C02001897AB /* RBAlbum.swift in Sources */,
+				81E8FB861C2E2C02001897AB /* RBBase.swift in Sources */,
+				81E8FB851C2E2C02001897AB /* RBArtist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81DCF1151C2DCF6D0015B9E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E8FB881C2E3049001897AB /* RBAlbum.swift in Sources */,
+				81E8FB891C2E3049001897AB /* RBArtist.swift in Sources */,
+				81E8FB8A1C2E3049001897AB /* RBBase.swift in Sources */,
+				81E8FB8B1C2E3049001897AB /* RBTrack.swift in Sources */,
+				81DCF1231C2DCFA60015B9E8 /* RockboxClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81F104811C2E15200062F58A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E8FB8C1C2E304F001897AB /* RBAlbum.swift in Sources */,
+				81E8FB8D1C2E304F001897AB /* RBArtist.swift in Sources */,
+				81E8FB8E1C2E304F001897AB /* RBBase.swift in Sources */,
+				81E8FB8F1C2E304F001897AB /* RBTrack.swift in Sources */,
+				81F1048E1C2E154F0062F58A /* RockboxClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		81DCF0FA1C2DCD750015B9E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		81DCF0FB1C2DCD750015B9E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		81DCF10A1C2DCDBC0015B9E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F0977CA2E3FB386806EEB56 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Rockbox-Client-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "akqa.Rockbox-Client-OSX";
+				PRODUCT_NAME = RockboxClient;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81DCF10B1C2DCDBC0015B9E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C6115F2C318DEB5AECB1E6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Rockbox-Client-OSX/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "akqa.Rockbox-Client-OSX";
+				PRODUCT_NAME = RockboxClient;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		81DCF1201C2DCF6D0015B9E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "Rockbox-Client-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "akqa.Rockbox-Client-iOS";
+				PRODUCT_NAME = RockboxClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		81DCF1211C2DCF6D0015B9E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "Rockbox-Client-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "akqa.Rockbox-Client-iOS";
+				PRODUCT_NAME = RockboxClient;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		81F1048C1C2E15200062F58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "Rockbox-Client-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "akqa.Rockbox-Client-tvOS";
+				PRODUCT_NAME = RockboxClient;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		81F1048D1C2E15200062F58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = "Rockbox-Client-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "akqa.Rockbox-Client-tvOS";
+				PRODUCT_NAME = RockboxClient;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81DCF0EE1C2DCD750015B9E8 /* Build configuration list for PBXProject "Rockbox-Framework-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DCF0FA1C2DCD750015B9E8 /* Debug */,
+				81DCF0FB1C2DCD750015B9E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DCF1091C2DCDBC0015B9E8 /* Build configuration list for PBXNativeTarget "Rockbox-Client-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DCF10A1C2DCDBC0015B9E8 /* Debug */,
+				81DCF10B1C2DCDBC0015B9E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81DCF11F1C2DCF6D0015B9E8 /* Build configuration list for PBXNativeTarget "Rockbox-Client-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81DCF1201C2DCF6D0015B9E8 /* Debug */,
+				81DCF1211C2DCF6D0015B9E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F1048B1C2E15200062F58A /* Build configuration list for PBXNativeTarget "Rockbox-Client-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81F1048C1C2E15200062F58A /* Debug */,
+				81F1048D1C2E15200062F58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81DCF0EB1C2DCD750015B9E8 /* Project object */;
+}
