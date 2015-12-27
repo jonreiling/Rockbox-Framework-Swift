@@ -45,9 +45,7 @@ public class RockboxClient {
         self.server = server
         setupSockets()
         
-        search("ratatat")
-//        fetchAlbum("spotify:album:4Lp4NxL8v03Mxg3hbAgW1Z")
-//        fetchArtist("spotify:artist:57dN52uHvrHOxijzpIgu3E")
+
     }
     
     public func connect() {
@@ -109,7 +107,7 @@ public class RockboxClient {
     //MARK: -
     //MARK: Spotify API functions
     
-    public func search(searchTerm:String) {
+    public func search(searchTerm:String, success: (tracks :[RBTrack],albums:[RBAlbum],artists:[RBArtist]) ->() , fail: (error:NSError) -> () ) {
         
         Alamofire.request(.GET, "https://api.spotify.com/v1/search?type=artist,album,track", parameters: ["q":"ratatat","limit":40] ).validate().responseJSON { response in
             switch response.result {
@@ -120,8 +118,6 @@ public class RockboxClient {
                     var tracks:[RBTrack] = []
                     var albums:[RBAlbum] = []
                     var artists:[RBArtist] = []
-                    
-                    print("JSON: \(json)")
                     
                     if let jsonTracks = json["tracks"]["items"].array {
                         for jsonTrack in jsonTracks {
@@ -140,19 +136,19 @@ public class RockboxClient {
                             artists.append( RBArtist(json:jsonArtist) )
                         }
                     }
-                    print(tracks.count)
-                    print("json AF")
+                    success(tracks: tracks, albums: albums, artists: artists)
                     
                     
                 }
             case .Failure(let error):
+                fail(error: error)
                 print(error)
             }
         }
         
     }
     
-    public func fetchAlbum(albumId:String) {
+    public func fetchAlbum(albumId:String, success:(album:RBAlbum) -> () , fail: (error:NSError) -> ()) {
         
         let cleanedAlbumId = albumId.stringByReplacingOccurrencesOfString("spotify:album:", withString: "")
         
@@ -163,15 +159,17 @@ public class RockboxClient {
 
                     let json = JSON(value)
                     let album:RBAlbum = RBAlbum(json:json)
+                    success(album: album)
                 }
+                
             case .Failure(let error):
-                print(error)
+                fail(error: error)
             }
         }
         
     }
     
-    public func fetchArtist(artistId:String) {
+    public func fetchArtist(artistId:String, success:(artist:RBArtist) -> ()  , fail: (error:NSError) -> ()) {
         
         let cleanedArtistId = artistId.stringByReplacingOccurrencesOfString("spotify:artist:", withString: "")
         
@@ -185,16 +183,16 @@ public class RockboxClient {
                     
                     //Artist objects have to be fetched in two parts. The first is to get the basic info.
                     //The second is to get the albums.
-                    self.fetchArtistAlbums(cleanedArtistId, artist: artist)
+                    self.fetchArtistAlbums(cleanedArtistId, artist: artist, success: success)
                 
                 }
             case .Failure(let error):
-                print(error)
+                fail(error: error)
             }
         }
     }
 
-    private func fetchArtistAlbums(artistId:String,artist:RBArtist) {
+    private func fetchArtistAlbums(artistId:String,artist:RBArtist, success:(artist:RBArtist) -> () ) {
         
         Alamofire.request(.GET, "https://api.spotify.com/v1/artists/" + artistId + "/albums/?album_type=album&market=US&limit=50" ).validate().responseJSON { response in
             switch response.result {
@@ -203,7 +201,7 @@ public class RockboxClient {
                     
                     let json = JSON(value)
                     artist.populateFromJSON(json)
-                    print(json);
+                    success(artist: artist)
                 }
             case .Failure(let error):
                 print(error)
