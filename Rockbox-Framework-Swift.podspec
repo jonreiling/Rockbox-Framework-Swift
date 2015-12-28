@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source_files  = "Source/**/*.swift"
 
   s.dependency 'Alamofire', '~> 3.0'
-  s.dependency 'Socket.IO-Client-Swift', '4.1.6'
+  s.dependency 'Socket.IO-Client-Swift', '> 4.1.6'
   s.dependency 'SwiftyJSON', '2.3.2'
 end
