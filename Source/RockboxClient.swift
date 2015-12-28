@@ -40,15 +40,12 @@ public class RockboxClient {
     public func getConnected() -> Bool { return connected }
     public func getQueue() -> [RBTrack] { return queue }
     
-    
-    public func setServer(server:String) {
+    public func setPassthroughServer(server:String) {
         self.server = server
-        setupSockets()
-        
-
     }
     
     public func connect() {
+        setupSockets()
         socket.connect()
     }
     
