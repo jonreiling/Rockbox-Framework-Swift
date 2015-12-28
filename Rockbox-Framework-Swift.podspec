@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "Rockbox-Framework-Swift"
   s.version      = "0.0.1"
-  s.summary      = ""
+  s.summary      = "This is my summary"
   s.homepage     = "https://github.com/jonreiling/Rockbox-Framework-Swift"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "Jon Reiling" => "jreiling@mac.com" }
@@ -15,4 +15,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/jonreiling/Rockbox-Framework-Swift.git" }
   s.source_files  = "Source/**/*.swift"
 
+  s.dependency 'Alamofire', '~> 3.0'
+  s.dependency 'Socket.IO-Client-Swift', '4.1.6'
+  s.dependency 'SwiftyJSON', '2.3.2'
 end
