@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Rockbox-Client-Swift.xcodeproj">
+      location = "self:Rockbox-Framework-Swift.xcodeproj">
    </FileRef>
 </Workspace>

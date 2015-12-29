@@ -20,29 +20,10 @@ public struct Rockbox {
     }
 }
 
-public class RockboxClient {
+public class RockboxClient : RockboxBase {
 
     public static let sharedInstance = RockboxClient()
     
-    private var connected:Bool = false
-    private var socket:SocketIOClient!
-    private var server:String!
-    private var volume:Int = 50
-    private var isPlaying : Bool = false
-    private var radioMode : Bool = false
-    private var passthroughConnection : Bool = false
-    private var queue : [RBTrack] = []
-    
-    public init() {}
-    public func getVolume() -> Int { return volume }
-    public func getIsPlaying() -> Bool { return isPlaying }
-    public func getRadioMode() -> Bool { return radioMode }
-    public func getConnected() -> Bool { return connected }
-    public func getQueue() -> [RBTrack] { return queue }
-    
-    public func setPassthroughServer(server:String) {
-        self.server = server
-    }
     
     public func connect() {
         setupSockets()
@@ -53,12 +34,17 @@ public class RockboxClient {
         socket.disconnect()
     }
     
+    
     //MARK: -
     //MARK: Rockbox API functions
     
-    
     public func add(id:String) {
-        self.socket.emit("add", id)
+
+        if ( connected ) {
+            self.socket.emit("add", id)
+        } else {
+            super.add(id)
+        }
     }
     
     public func togglePlayPause() {
@@ -66,7 +52,7 @@ public class RockboxClient {
         if ( connected ) {
             self.socket.emit("pause")
         } else {
-            Alamofire.request(.GET, server + "/api/pause")
+            super.togglePlayPause()
         }
     }
     
@@ -75,7 +61,7 @@ public class RockboxClient {
         if ( connected ) {
             self.socket.emit("skip")
         } else {
-            Alamofire.request(.GET, server + "/api/skip")
+            super.skip()
         }
     }
     
@@ -85,11 +71,7 @@ public class RockboxClient {
             self.socket.emit("setRadio",radioOn)
         } else {
             
-            if ( radioOn ) {
-                Alamofire.request(.GET, server + "/api/radio/on")
-            } else {
-                Alamofire.request(.GET, server + "/api/radio/off")
-            }
+            super.setRadio(radioOn)
         }
     }
     
@@ -97,112 +79,7 @@ public class RockboxClient {
         if ( connected ) {
             self.socket.emit("setVolume",vol)
         } else {
-            Alamofire.request(.GET, server + "/api/volume/" + String(vol) )
-        }
-    }
-
-    //MARK: -
-    //MARK: Spotify API functions
-    
-    public func search(searchTerm:String, success: (tracks :[RBTrack],albums:[RBAlbum],artists:[RBArtist]) ->() , fail: (error:NSError) -> () ) {
-        
-        Alamofire.request(.GET, "https://api.spotify.com/v1/search?type=artist,album,track", parameters: ["q":"ratatat","limit":40] ).validate().responseJSON { response in
-            switch response.result {
-            case .Success:
-                if let value = response.result.value {
-                    let json = JSON(value)
-                    
-                    var tracks:[RBTrack] = []
-                    var albums:[RBAlbum] = []
-                    var artists:[RBArtist] = []
-                    
-                    if let jsonTracks = json["tracks"]["items"].array {
-                        for jsonTrack in jsonTracks {
-                            tracks.append( RBTrack(json:jsonTrack) )
-                        }
-                    }
-                    
-                    if let jsonAlbums = json["albums"]["items"].array {
-                        for jsonAlbum in jsonAlbums {
-                            albums.append( RBAlbum(json:jsonAlbum) )
-                        }
-                    }
-                    
-                    if let jsonArtists = json["artists"]["items"].array {
-                        for jsonArtist in jsonArtists {
-                            artists.append( RBArtist(json:jsonArtist) )
-                        }
-                    }
-                    success(tracks: tracks, albums: albums, artists: artists)
-                    
-                    
-                }
-            case .Failure(let error):
-                fail(error: error)
-                print(error)
-            }
-        }
-        
-    }
-    
-    public func fetchAlbum(albumId:String, success:(album:RBAlbum) -> () , fail: (error:NSError) -> ()) {
-        
-        let cleanedAlbumId = albumId.stringByReplacingOccurrencesOfString("spotify:album:", withString: "")
-        
-        Alamofire.request(.GET, "https://api.spotify.com/v1/albums/" + cleanedAlbumId ).validate().responseJSON { response in
-            switch response.result {
-            case .Success:
-                if let value = response.result.value {
-
-                    let json = JSON(value)
-                    let album:RBAlbum = RBAlbum(json:json)
-                    success(album: album)
-                }
-                
-            case .Failure(let error):
-                fail(error: error)
-            }
-        }
-        
-    }
-    
-    public func fetchArtist(artistId:String, success:(artist:RBArtist) -> ()  , fail: (error:NSError) -> ()) {
-        
-        let cleanedArtistId = artistId.stringByReplacingOccurrencesOfString("spotify:artist:", withString: "")
-        
-        Alamofire.request(.GET, "https://api.spotify.com/v1/artists/" + cleanedArtistId ).validate().responseJSON { response in
-            switch response.result {
-            case .Success:
-                if let value = response.result.value {
-                    
-                    let json = JSON(value)
-                    let artist:RBArtist = RBArtist(json:json)
-                    
-                    //Artist objects have to be fetched in two parts. The first is to get the basic info.
-                    //The second is to get the albums.
-                    self.fetchArtistAlbums(cleanedArtistId, artist: artist, success: success)
-                
-                }
-            case .Failure(let error):
-                fail(error: error)
-            }
-        }
-    }
-
-    private func fetchArtistAlbums(artistId:String,artist:RBArtist, success:(artist:RBArtist) -> () ) {
-        
-        Alamofire.request(.GET, "https://api.spotify.com/v1/artists/" + artistId + "/albums/?album_type=album&market=US&limit=50" ).validate().responseJSON { response in
-            switch response.result {
-            case .Success:
-                if let value = response.result.value {
-                    
-                    let json = JSON(value)
-                    artist.populateFromJSON(json)
-                    success(artist: artist)
-                }
-            case .Failure(let error):
-                print(error)
-            }
+            super.setVolume(vol)
         }
     }
     
