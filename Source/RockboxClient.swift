@@ -23,7 +23,10 @@ public struct Rockbox {
 public class RockboxClient : RockboxBase {
 
     public static let sharedInstance = RockboxClient()
+    private var socket:SocketIOClient!
     
+    
+    override init() {}
     
     public func connect() {
         setupSockets()
@@ -38,7 +41,7 @@ public class RockboxClient : RockboxBase {
     //MARK: -
     //MARK: Rockbox API functions
     
-    public func add(id:String) {
+    override public func add(id:String) {
 
         if ( connected ) {
             self.socket.emit("add", id)
@@ -47,7 +50,7 @@ public class RockboxClient : RockboxBase {
         }
     }
     
-    public func togglePlayPause() {
+    override public func togglePlayPause() {
         
         if ( connected ) {
             self.socket.emit("pause")
@@ -56,7 +59,7 @@ public class RockboxClient : RockboxBase {
         }
     }
     
-    public func skip() {
+    override public func skip() {
         
         if ( connected ) {
             self.socket.emit("skip")
@@ -65,7 +68,7 @@ public class RockboxClient : RockboxBase {
         }
     }
     
-    public func setRadio(radioOn:Bool) {
+    override public func setRadio(radioOn:Bool) {
         
         if ( connected ) {
             self.socket.emit("setRadio",radioOn)
@@ -75,7 +78,7 @@ public class RockboxClient : RockboxBase {
         }
     }
     
-    public func setVolume(vol:AnyObject) {
+    override public func setVolume(vol:AnyObject) {
         if ( connected ) {
             self.socket.emit("setVolume",vol)
         } else {
