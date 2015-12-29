@@ -33,6 +33,8 @@ Note: if you are compiling for both iOS and watchOS, you will need to set "dedup
 
 ```swift
 
+import Rockbox_Framework_Swift
+
 NSNotificationCenter.defaultCenter().addObserverForName(RockboxEvents.Queue, object: nil, queue: nil) { (_) -> Void in
     
     let queue = RockboxClient.sharedInstance.getQueue()
