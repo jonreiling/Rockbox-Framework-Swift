@@ -31,11 +31,13 @@ Note: if you are compiling for both iOS and watchOS, you will need to set "dedup
 
 ##Usage
 
+####Standard Usage (uses Sockets)
+
 ```swift
 
 import Rockbox_Framework_Swift
 
-NSNotificationCenter.defaultCenter().addObserverForName(RockboxEvents.Queue, object: nil, queue: nil) { (_) -> Void in
+NSNotificationCenter.defaultCenter().addObserverForName(RockboxEvent.Queue, object: nil, queue: nil) { (_) -> Void in
     
     let queue = RockboxClient.sharedInstance.getQueue()
     
@@ -49,4 +51,31 @@ NSNotificationCenter.defaultCenter().addObserverForName(RockboxEvents.Queue, obj
 
 RockboxClient.sharedInstance.setPassthroughServer("http://localhost:3000")
 RockboxClient.sharedInstance.connect()
+```
+
+
+####Lite Usage (uses REST)
+
+In cases where sockets aren't necessary, or available. (watchOS, for example.) In this case, you will need to call `update` in order to fetch the latest values. Polling may be added in the future, but for now, this assumes a quick-hit look at state data.
+
+```swift
+import Rockbox_Framework_Swift
+
+RockboxClientLite.sharedInstance.setPassthroughServer("http://localhost:3000")
+
+RockboxClientLite.sharedInstance.update({ () -> Void in
+    
+        let queue = RockboxClientLite.sharedInstance.getQueue()
+        
+        if (queue.count == 0 ) {
+            print("nothing is playing")
+        } else {
+            let track = queue.first!
+            print(track.name)
+        }
+    
+    }) { (error) -> Void in
+        print(error)
+}
+
 ```
