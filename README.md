@@ -41,11 +41,10 @@ NSNotificationCenter.defaultCenter().addObserverForName(RockboxEvent.Queue, obje
     
     let queue = RockboxClient.sharedInstance.getQueue()
     
-    if (queue.count == 0 ) {
-        print("nothing is playing")
-    } else {
-        let track = queue.first!
+    if let track = queue.first {
         print(track.name)
+    } else {
+        print("nothing is playing")
     }
 }
 
@@ -67,11 +66,10 @@ RockboxClientLite.sharedInstance.update({ () -> Void in
     
         let queue = RockboxClientLite.sharedInstance.getQueue()
         
-        if (queue.count == 0 ) {
-            print("nothing is playing")
-        } else {
-            let track = queue.first!
+        if let track = queue.first {
             print(track.name)
+        } else {
+            print("nothing is playing")
         }
     
     }) { (error) -> Void in
