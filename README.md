@@ -27,9 +27,9 @@ target 'MyApp' do
 	pod 'Rockbox-Framework-Swift', :git => 'https://github.com/jonreiling/Rockbox-Framework-Swift.git'
 end
 ```
-Note: if you are compiling for both iOS and watchOS, you will need to set "deduplicate_targets: false" in ~/.cocoapods/config.yaml
+Note: if you are compiling for both iOS and watchOS, you will need to set "deduplicate_targets: false" in ~/.cocoapods/config.yaml (don't be surprised if this hasn't be created yet.)
 
-**Usage
+##Usage
 
 ```swift
 
