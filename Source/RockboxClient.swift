@@ -11,13 +11,11 @@ import Socket_IO_Client_Swift
 import Alamofire
 import SwiftyJSON
 
-public struct Rockbox {
-    public struct Updates {
-        public static let State = "kRockboxStateUpdate"
-        public static let Volume = "kRockboxVolumeUpdate"
-        public static let Queue = "kRockboxQueueUpdate"
-        public static let PassthroughConnection = "kRockboxPassthroughConnectionUpdate"
-    }
+public struct RockboxEvent {
+    public static let State = "kRockboxStateUpdate"
+    public static let Volume = "kRockboxVolumeUpdate"
+    public static let Queue = "kRockboxQueueUpdate"
+    public static let PassthroughConnection = "kRockboxPassthroughConnectionUpdate"
 }
 
 public class RockboxClient : RockboxBase {
@@ -113,7 +111,7 @@ public class RockboxClient : RockboxBase {
             
             self.queue = tracks
             
-            NSNotificationCenter.defaultCenter().postNotificationName(Rockbox.Updates.Queue, object: nil);
+            NSNotificationCenter.defaultCenter().postNotificationName(RockboxEvent.Queue, object: nil);
             
         }
 
@@ -129,7 +127,7 @@ public class RockboxClient : RockboxBase {
                 self.radioMode = radioMode
             }
             
-            NSNotificationCenter.defaultCenter().postNotificationName(Rockbox.Updates.State, object: nil);
+            NSNotificationCenter.defaultCenter().postNotificationName(RockboxEvent.State, object: nil);
         }
         
         socket.on("volumeUpdate") {data, ack in
@@ -139,7 +137,7 @@ public class RockboxClient : RockboxBase {
                 self.volume = volume
             }
             
-            NSNotificationCenter.defaultCenter().postNotificationName(Rockbox.Updates.Volume, object: nil);
+            NSNotificationCenter.defaultCenter().postNotificationName(RockboxEvent.Volume, object: nil);
         
         }
 
@@ -151,7 +149,7 @@ public class RockboxClient : RockboxBase {
                 self.passthroughConnection = passthroughConnection
             }
 
-            NSNotificationCenter.defaultCenter().postNotificationName(Rockbox.Updates.PassthroughConnection, object: nil);
+            NSNotificationCenter.defaultCenter().postNotificationName(RockboxEvent.PassthroughConnection, object: nil);
         }
 
     }
