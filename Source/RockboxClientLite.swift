@@ -47,8 +47,7 @@ public class RockboxClientLite : RockboxBase {
                         }
                     }
                     
-                    print(json);
-                    
+                    success()
                     
                 }
             case .Failure(let error):
