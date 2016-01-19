@@ -64,7 +64,7 @@ public class RockboxBase {
     
     public func search(searchTerm:String, success: (tracks :[RBTrack],albums:[RBAlbum],artists:[RBArtist]) ->() , fail: (error:NSError) -> Void ) {
         
-        Alamofire.request(.GET, "https://api.spotify.com/v1/search?type=artist,album,track", parameters: ["q":"ratatat","limit":40] ).validate().responseJSON { response in
+        Alamofire.request(.GET, "https://api.spotify.com/v1/search?type=artist,album,track", parameters: ["q":searchTerm,"limit":40] ).validate().responseJSON { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
