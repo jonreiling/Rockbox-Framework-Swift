@@ -62,7 +62,7 @@ import Rockbox_Framework_Swift
 
 RockboxClientLite.sharedInstance.setPassthroughServer("http://localhost:3000")
 
-RockboxClientLite.sharedInstance.update({ () -> Void in
+RockboxClientLite.sharedInstance.manualUpdate({ () -> Void in
     
         let queue = RockboxClientLite.sharedInstance.getQueue()
         
